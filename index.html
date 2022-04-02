@@ -1,0 +1,416 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+      * {
+        font-family: 'Press Start 2P', cursive;
+      }
+  
+      body {
+        background-color: azure;
+      }
+  
+      h1 {
+        margin: 0;
+      }
+  
+      button {
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+      }
+  
+      button:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <!-- HEADER STARTS -->
+  <header>
+    <!--navbar controller icon-->
+    <a href="#"> <img class="logo" src="images/video-console.png"  alt="logo"></a>
+    <title>Dryden.dev</title>
+    <h1>Dryden.dev</h1>
+    
+    
+
+    <nav>
+        <p>Click the power button to start the game!</p>
+      <ul>
+        
+        <!--navbar buttons-->
+        <!--y button-->
+        <li class="button-one"><i class="fas fa-power-off fa-2x"></i></li>
+        <!--x button-->
+        <li class="button-two"><a href="#projects">Projects</a></li>
+        <!--a button-->
+        <li class="button-three"><a href="#l">Skills</a></li>
+        <!--b button-->
+        <li class="button-four"><a href="#l">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  
+  
+</body>
+  <!-- GAME START -->
+  <div style="display: inline-block; position: relative">
+    <div
+      id="overlappingDiv"
+      style="
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 10;
+      "
+    ></div>
+  
+    <canvas></canvas>
+  
+    <div id="userInterface" style="display: none">
+      <!-- Represents health bar of draggle (enemy) -->
+      <div
+        style="
+          background-color: white;
+          width: 250px;
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          border: 4px black solid;
+          padding: 12px;
+        "
+      >
+        <h1 style="font-size: 16px">Bug</h1>
+        <div style="position: relative">
+          <div
+            style="height: 5px; background-color: #ccc; margin-top: 10px"
+          ></div>
+          <div
+            id="enemyHealthBar"
+            style="
+              height: 5px;
+              background-color: green;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+            "
+          ></div>
+        </div>
+      </div>
+  
+      <!-- Represents health bar of emby (us) -->
+      <div
+        style="
+          background-color: white;
+          width: 250px;
+          position: absolute;
+          top: 330px;
+          right: 50px;
+          border: 4px black solid;
+          padding: 12px;
+        "
+      >
+        <h1 style="font-size: 16px">Developer</h1>
+        <div style="position: relative">
+          <div
+            style="height: 5px; background-color: #ccc; margin-top: 10px"
+          ></div>
+          <div
+            id="playerHealthBar"
+            style="
+              height: 5px;
+              background-color: green;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+            "
+          ></div>
+        </div>
+      </div>
+  
+      <div
+        style="
+          background-color: white;
+          height: 140px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          border-top: 4px black solid;
+          display: flex;
+        "
+         >
+        <div
+          id="dialogueBox"
+          style="
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            padding: 12px;
+            display: none;
+            cursor: pointer;
+          "
+        >
+        </div>
+        <div
+          id="attacksBox"
+          style="
+            width: 66.66%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          "
+        ></div>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 33.33%;
+            border-left: 4px black solid;
+          "
+        >
+          <h1 id="attackType" style="font-size: 16px">Attack Type</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- GAME END -->
+<!-- BELOW GAME STARTS HERE -->
+
+<!-- ABOUT ME -->
+
+<div id="#aboutme"style="
+background-color:lightgray;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+    
+        <p>Game Instructions!</p>
+
+
+</div>
+<div style="
+background-color:white;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+
+        <div>
+        <p>Controls:</p>
+        <p>WASD to move.</p>
+        <p>Click to select battle moves or to move through dialogue</p>
+        </div>
+
+        
+
+
+    </div>
+
+   
+
+
+
+</div>
+
+
+
+
+<!-- FAVOURITE LANGUAGES SECTION -->
+<div id="#projects"style="
+background-color:lightgray;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+    
+        <p>Projects!</p>
+
+
+</div>
+<div style="
+background-color:white;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+<section class="sub-section-alt" id="projects">
+    <div class="project-container">
+        <div class="project-card">
+            <h3>Gravity-Ai Financial Article Categorizer</h3>
+            <p>Need all those pesky financial articles sorted? Look no further!</p>
+            <p class ="subtext">Technology used:</p>
+            <i class="fa-brands fa-python fa-2x"></i>
+            <i class="fa-brands fa-docker fa-2x"></i>
+            <hr/>
+        </div>
+        <div class="project-card">
+            <h3>Wordle</h3>
+            <p class ="subtext">The one thing the world needs is another wordle so why not!</p>
+            <p>Technology used: REACT, REST, PostgresSQL</p>
+            <i class="fa-brands fa-js-square fa-2x"></i>
+            <i class="fa-brands fa-html5 fa-2x"></i>
+            <i class="fa-brands fa-css3-alt fa-2x"></i>
+            <i class="fab fa-node fa-2x"></i>
+            <hr/>
+        </div>
+        <div class="project-card">
+            <h3>Portfolio</h3>
+            <p class ="subtext">You're already here! but check out the source code if you havent</p>
+            <p>Technology used:</p>
+            <i class="fa-brands fa-js-square fa-2x"></i>
+            <i class="fa-brands fa-html5 fa-2x"></i>
+            <i class="fa-brands fa-css3-alt fa-2x"></i>
+
+            <hr/>
+        </div>
+    </div>
+        
+
+
+    </div>
+
+   
+
+
+
+</div>
+
+
+
+
+
+<!-- ABOUT GAME SECTION -->
+<div style="
+background-color:lightgray;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+    
+        <p>Favourite tools!</p>
+
+
+</div>
+<div style="
+background-color:white;
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+
+        <div> 
+             
+            
+
+
+        </div>
+
+        
+
+
+    </div>
+
+   
+
+
+
+</div>
+
+
+<!-- CONTACT ME SECTION -->
+
+<div style="
+background-color:rgb(196, 195, 195);
+border: 4px black solid;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+">
+<p>Reach out!</p>
+   
+        <div>
+        <button class="start-btn">
+            <a href="https://github.com/drydenbussey">
+                <p>Github</p>
+            </a>
+        </button>
+   
+    
+        <button class="start-btn">
+            <a href="https://www.linkedin.com/in/dryden-bussey-32157b216">
+                <p>LinkedIn</p>
+            </a>
+        </button>
+
+        <button class="start-btn">
+            <a href="mailto: dryden.bussey@keyin.com">
+                <p>Email</p>
+            </a>
+        </button>
+
+
+        
+    </div>
+
+   
+
+
+
+</div>
+
+
+
+
+<script src="https://kit.fontawesome.com/a701a94273.js" crossorigin="anonymous"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="data/audio.js"></script>
+  <script src="data/battleZones.js"></script>
+  <script src="data/collisions.js"></script>
+  <script src="data/attacks.js"></script>
+  <script src="data/monsters.js"></script>
+  <script src="classes.js"></script>
+  <script src="index.js"></script>
+  <script src="battleScene.js"></script>
