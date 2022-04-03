@@ -1,6 +1,8 @@
-const canvas = document.querySelector('canvas');
+var canvas = document.getElementById('responsive-canvas');
 const c = canvas.getContext('2d');
 
+var heightRatio = 1.5;
+canvas.height = canvas.width * heightRatio;
 canvas.width = 1024
 canvas.height = 576
 

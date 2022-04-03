@@ -34,25 +34,25 @@
   <!-- HEADER STARTS -->
   <header>
     <!--navbar controller icon-->
-    <a href="#"> <img class="logo" src="images/video-console.png"  alt="logo"></a>
+    
     <title>Dryden.dev</title>
-    <h1>Dryden.dev</h1>
+    <h1 class="logo">Dryden.dev</h1>
     
     
 
     <nav>
-        <p>Click the power button to start the game!</p>
+        <p>Click the start button to play!</p>
       <ul>
         
         <!--navbar buttons-->
         <!--y button-->
-        <li class="button-one"><i class="fas fa-power-off fa-2x"></i></li>
+        <li class="button-one"><a href="#Instructions">START</a></li>
         <!--x button-->
         <li class="button-two"><a href="#projects">Projects</a></li>
         <!--a button-->
-        <li class="button-three"><a href="#l">Skills</a></li>
+        <li class="button-three"><a href="#skills">Skills</a></li>
         <!--b button-->
-        <li class="button-four"><a href="#l">Contact</a></li>
+        <li class="button-four"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -77,7 +77,7 @@
       "
     ></div>
   
-    <canvas></canvas>
+    <canvas id="responsive-canvas"></canvas>
   
     <div id="userInterface" style="display: none">
       <!-- Represents health bar of draggle (enemy) -->
@@ -196,7 +196,7 @@
 
 <!-- ABOUT ME -->
 
-<div id="#aboutme"style="
+<div id="#Instructions"style="
 background-color:lightgray;
 border: 4px black solid;
 align-items: center;
@@ -268,6 +268,7 @@ text-align: center;
             <p class ="subtext">Technology used:</p>
             <i class="fa-brands fa-python fa-2x"></i>
             <i class="fa-brands fa-docker fa-2x"></i>
+            <p>link</p>
             <hr/>
         </div>
         <div class="project-card">
@@ -278,6 +279,7 @@ text-align: center;
             <i class="fa-brands fa-html5 fa-2x"></i>
             <i class="fa-brands fa-css3-alt fa-2x"></i>
             <i class="fab fa-node fa-2x"></i>
+            <p>link</p>
             <hr/>
         </div>
         <div class="project-card">
@@ -287,6 +289,7 @@ text-align: center;
             <i class="fa-brands fa-js-square fa-2x"></i>
             <i class="fa-brands fa-html5 fa-2x"></i>
             <i class="fa-brands fa-css3-alt fa-2x"></i>
+            <p>link</p>
 
             <hr/>
         </div>
@@ -307,7 +310,7 @@ text-align: center;
 
 
 <!-- ABOUT GAME SECTION -->
-<div style="
+<div id="#skills"style="
 background-color:lightgray;
 border: 4px black solid;
 align-items: center;
@@ -316,7 +319,7 @@ text-align: center;
 
 ">
     
-        <p>Favourite tools!</p>
+        <p>Skills!</p>
 
 
 </div>
@@ -331,7 +334,14 @@ text-align: center;
 
         <div> 
              
-            
+            <p>PostgresSQL, REACT, REST</p>
+            <i class="fa-brands fa-js-square fa-2x"></i>
+            <i class="fa-brands fa-html5 fa-2x"></i>
+            <i class="fa-brands fa-css3-alt fa-2x"></i>
+            <i class="fab fa-node fa-2x"></i>
+            <i class="fa-brands fa-python fa-2x"></i>
+            <i class="fa-brands fa-docker fa-2x"></i>
+
 
 
         </div>
@@ -350,7 +360,7 @@ text-align: center;
 
 <!-- CONTACT ME SECTION -->
 
-<div style="
+<div id= "#contact"style="
 background-color:rgb(196, 195, 195);
 border: 4px black solid;
 align-items: center;
@@ -358,32 +368,27 @@ justify-content: center;
 text-align: center;
 
 ">
-<p>Reach out!</p>
-   
-        <div>
-        <button class="start-btn">
-            <a href="https://github.com/drydenbussey">
-                <p>Github</p>
-            </a>
-        </button>
-   
+<header>
     
-        <button class="start-btn">
-            <a href="https://www.linkedin.com/in/dryden-bussey-32157b216">
-                <p>LinkedIn</p>
-            </a>
-        </button>
+    <h1 class="logo">Reach out!</h1>
 
-        <button class="start-btn">
-            <a href="mailto: dryden.bussey@keyin.com">
-                <p>Email</p>
-            </a>
-        </button>
-
-
+    <nav>
         
-    </div>
+      <ul>
+        
+        <!--navbar buttons-->
+        <!--y button-->
+        <li class="button-one"><a href="#Instructions">RESUME</a></li>
+        <!--x button-->
+        <li class="button-two"><a href="#projects">EMAIL</a></li>
+        <!--a button-->
+        <li class="button-three"><a href="#skills">GITHUB</a></li>
+        <!--b button-->
+        <li class="button-four"><a href="#contact">LINKEDIN</a></li>
+      </ul>
+    </nav>
 
+  </header>
    
 
 
