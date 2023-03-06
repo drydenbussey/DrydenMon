@@ -115,7 +115,7 @@ class Monster extends Sprite{
 
          switch(attack.name) {
             //ASK DRYDEN ATTACK
-             case 'Break Game':
+             case 'AskDryden':
                  audio.initFireball.play()
                  const fireballImage = new Image()
                  fireballImage.src = "/images/fireball.png"
